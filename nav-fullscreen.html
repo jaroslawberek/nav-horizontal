@@ -7,80 +7,97 @@
     <title>Navbar Premium</title>
     <link rel="stylesheet" href="css/bootstrap-5/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/nav-fullscreen.css">
+    <link rel="stylesheet" href="css/nav-h-grid.css">
     <script src="https://kit.fontawesome.com/d6d2b391cd.js" crossorigin="anonymous"></script>
-    <!-- <style>
-        /* --- PEŁNOEKRANOWE MENU --- */
-        
-        @media (max-width: 767.98px) {
-            .navbar-collapse.fullscreen {
-                position: fixed;
-                top: -100%;
-                left: 0;
-                width: 100%;
-                height: 100vh;
-                background-color: rgba(33, 37, 41, 0.97);
-                z-index: 1050;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                opacity: 0;
-                pointer-events: none;
-                transition: top 0.4s ease, opacity 0.4s ease;
-            }
-            /* Pokazujemy menu z animacją */
-            .navbar-collapse.fullscreen.show {
-                top: 0;
-                opacity: 1;
-                pointer-events: auto;
-            }
-            /* Lista menu */
-            .navbar-collapse.fullscreen ul.navbar-nav {
-                text-align: left;
-            }
-            .navbar-collapse.fullscreen .nav-link {
-                font-size: 1.6rem;
-                padding: 12px 0;
-                color: white !important;
-                transition: color 0.3s ease;
-            }
-            .navbar-collapse.fullscreen .nav-link:hover {
-                color: #0d6efd !important;
-            }
-            /* Hamburger zawsze na wierzchu */
-            .navbar-toggler {
-                z-index: 1100;
-            }
-        }
-    </style> -->
 </head>
 
 <body>
     <header>
+        <div class="container navbar-light bg-light" style="height: 100px;">
+            <div class="row h-100 align-items-center">
+                <div class="col   d-flex justify-content-center justify-content-lg-end align-items-center">
+                    <a class="" href="#">
+                        <img class="logo img-fluid" src="img/logo.svg" alt="Apteka HIT - Apteka internetowa" style="width: 233px;">
+                    </a>
+                </div>
 
-        <div class="d-flex bg-light py-1 justify-content-between">
-            <img src=" img/mediamax.png " alt=" " class="img-fluid ">
-            <div class="" style="width: 40%;">
-                <ul class="navbar-nav w-100 d-flex flex-row justify-content-end pe-3">
-                    <li class="nav-items ">
-                        <a href="#" class="nav-link px-2">Opcja1</a>
-                    </li>
-                    <li class="nav-items ">
-                        <a href="#" class="nav-link px-2">Opcja2</a>
-                    </li>
-                    <li class="nav-items ">
-                        <a href="#" class="nav-link px-2">Opcja3</a>
-                    </li>
-                    <li class="nav-items ">
-                        <a href="#" class="nav-link px-5">Opcja4</a>
-                    </li>
-                </ul>
+                <div class="col-12 col-lg-4 d-none d-lg-block">
+                    <form class="d-flex w-100 px-0">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="col-12 col-lg-4   justify-content-around  justify-content-lg-start">
+                    <a class="nav-link navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleContent" aria-controls="navbarToggleContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                        <span class="d-block title">Menu</span>
+                    </a>
+                    <a class="nav-link search-toggle d-block d-lg-none" aria-current="page" href="#">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span class="d-block title">Search</span>
+                    </a>
+                    <a class="nav-link  d-block text-center d-none d-lg-block" aria-current="page" href="#">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span class="d-block title">Widomości</span>
+                    </a>
+                    <a class="nav-link  d-block text-center " aria-current="page" href="#">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span class="d-block title">Terminarz</span>
+                    </a>
+                    <a class="nav-link  d-block text-center" aria-current="page" href="#">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="d-block title">Alerty</span>
+                    </a>
+                    <a class="nav-link  d-block text-center" aria-current="page" href="#">
+                        <i class="fa-regular fa-circle-user"></i>
+                        <span class="d-block title">Twoje konto</span>
+                    </a>
+                    <!-- <div class="row">
+                        <div class="col-3">
+                            <a class="nav-link  d-block text-center" aria-current="page" href="#">
+                                <i class="fa-regular fa-envelope"></i>
+                                <span class="d-block title">Widomości</span>
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            <a class="nav-link  d-block text-center" aria-current="page" href="#">
+                                <i class="fa-regular fa-calendar"></i>
+                                <span class="d-block title">Terminarz</span>
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            <a class="nav-link  d-block text-center" aria-current="page" href="#">
+                                <i class="fa-regular fa-circle-user"></i>
+                                <span class="d-block title">Alerty</span>
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            <a class="nav-link  d-block text-center" aria-current="page" href="#">
+                                <i class="fa-regular fa-circle-user"></i>
+                                <span class="d-block title">Twoje konto</span>
+                            </a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="container-fluid" id="mobileSearch">
+                <form role="search">
+                    <input class="form-control" type="search" placeholder="Szukaj..." aria-label="Szukaj">
+                    <button class=" btn-outline-success" type="submit">Szukaj</button>
+                </form>
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg justify-content-between">
+
+
+
+
+
+        <!-- ------------------------------------------------------  -->
+        <nav class="nav-h-flex navbar navbar-expand-lg justify-content-between ">
             <!-- Brand -->
-            <img src=" img/mediamax.png " alt=" " class="img-fluid ">
+
             <!-- Menu -->
-            <div class="navbar-collapse fullscreen blour-efekt" id="navbarToggleContent">
+            <div class="container navbar-collapse fullscreen blour-efekt justify-content-center" id="navbarToggleContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#navbarToggleContent">Strona główna</a>
@@ -100,9 +117,7 @@
                 </ul>
             </div>
             <!-- Hamburger -->
-            <button class="order-2 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleContent" aria-controls="navbarToggleContent" aria-expanded="false" aria-label="Toggle navigation">
-                 <i class="fa fa-bars"></i>
-            </button>
+
         </nav>
     </header>
 
@@ -121,6 +136,18 @@
                     });
                     bsCollapse.hide();
                 });
+            });
+
+            const toggleBtn = document.querySelector(".search-toggle");
+            const mobileSearch = document.getElementById("mobileSearch");
+            toggleBtn.addEventListener("click", function() {
+                // console.log(mobileSearch)
+                if (mobileSearch.style.display ===
+                    "none") {
+                    mobileSearch.style.display = "flex";
+                } else {
+                    mobileSearch.style.display = "none";
+                }
             });
         });
     </script>

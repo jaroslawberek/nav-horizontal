@@ -1,62 +1,64 @@
 @charset "UTF-8";
 /* Zmienne */
 header {
+  position: relative;
   margin: 0;
   padding: 0;
+}
+
+.nav-h-flex {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgb(21, 21, 22)), to(rgb(184, 187, 196)));
+  background-image: linear-gradient(90deg, rgb(21, 21, 22) 0%, rgb(184, 187, 196) 100%);
+  color: white !important;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-size: 16px;
   /**********************************    
 
   MOBILE
 
   ***********************************/
 }
-header .navbar {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgb(21, 21, 22)), to(rgb(184, 187, 196)));
-  background-image: linear-gradient(90deg, rgb(21, 21, 22) 0%, rgb(184, 187, 196) 100%);
-  color: white !important;
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  font-size: 16px;
-}
-header .navbar-brand {
+.nav-h-flex .navbar-brand {
   margin: 0 0 0 1.5rem;
   color: white;
 }
-header img {
+.nav-h-flex img {
   margin-left: 1rem;
   width: 200px;
   height: auto;
 }
-header .navbar-nav {
+.nav-h-flex .navbar-nav {
   margin-right: 45px;
 }
-header .navbar-nav .nav-item {
+.nav-h-flex .navbar-nav .nav-item {
   margin-left: 10px;
 }
-header .navbar-nav .nav-item .nav-link {
+.nav-h-flex .navbar-nav .nav-item .nav-link {
   color: white;
 }
-header .navbar-collapse.fullscreen {
+.nav-h-flex .navbar-collapse.fullscreen {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 @media (max-width: 991.98px) {
-  header {
+  .nav-h-flex {
     /* Pokazujemy menu z animacją */
     /* Lista menu */
     /* Hamburger zawsze na wierzchu */
   }
-  header .navbar-toggler {
+  .nav-h-flex .navbar-toggler {
     color: white !important;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  header img {
+  .nav-h-flex img {
     margin-left: 40px;
     width: 50px;
     height: auto;
   }
-  header .navbar-collapse.fullscreen {
+  .nav-h-flex .navbar-collapse.fullscreen {
     position: fixed;
     top: -100%;
     left: 0;
@@ -78,29 +80,29 @@ header .navbar-collapse.fullscreen {
     -webkit-transition: top 0.4s ease, opacity 0.4s ease;
     transition: top 0.4s ease, opacity 0.4s ease;
   }
-  header .blour-efekt {
+  .nav-h-flex .blour-efekt {
     background-color: rgba(33, 37, 41, 0.55) !important;
     backdrop-filter: blur(12px) !important;
   }
-  header .navbar-collapse.fullscreen.show {
+  .nav-h-flex .navbar-collapse.fullscreen.show {
     top: 0px;
     opacity: 1;
     pointer-events: auto;
   }
-  header .navbar-collapse.fullscreen ul.navbar-nav {
+  .nav-h-flex .navbar-collapse.fullscreen ul.navbar-nav {
     text-align: left;
   }
-  header .navbar-collapse.fullscreen .nav-link {
+  .nav-h-flex .navbar-collapse.fullscreen .nav-link {
     font-size: 1.6rem;
     padding: 12px 0;
     color: white !important;
     -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease;
   }
-  header .navbar-collapse.fullscreen .nav-link:hover {
+  .nav-h-flex .navbar-collapse.fullscreen .nav-link:hover {
     color: #0d6efd !important;
   }
-  header .navbar-toggler {
+  .nav-h-flex .navbar-toggler {
     z-index: 1100;
   }
 }

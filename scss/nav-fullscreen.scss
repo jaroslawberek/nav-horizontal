@@ -3,9 +3,7 @@
 $nav-h-background-color: rgba(1, 3, 10, 1);
 $nav-h-background-image: linear-gradient(90deg, rgb(21, 21, 22) 0%, rgba(184, 187, 196, 1) 100%);
 $nav-h-color: white;
-$nav-h-font-family: "Segoe UI",
-Tahoma,
-sans-serif;
+$nav-h-font-family: "Segoe UI", Tahoma, sans-serif;
 $nav-h-font-size: 16px;
 $nav-h-min-height: 100vh;
 $nav-h-padding-r: 45px;
@@ -14,16 +12,17 @@ $nav-h-navbar-brand-margin: 0 0 0 1.5rem;
 //nav-item
 $nav-h-nav-item-margin-left: 10px;
 header {
+    position: relative;
     margin: 0;
     padding: 0;
-    nav {}
-    .navbar {
-        background-image: $nav-h-background-image;
-        color: $nav-h-color !important;
-        font-family: $nav-h-font-family;
-        font-size: $nav-h-font-size;
-        // padding: 0;
-    }
+}
+
+.nav-h-flex {
+    background-image: $nav-h-background-image;
+    color: $nav-h-color !important;
+    font-family: $nav-h-font-family;
+    font-size: $nav-h-font-size;
+    // padding: 0;
     .navbar-brand {
         margin: $nav-h-navbar-brand-margin;
         color: $nav-h-color;
@@ -73,7 +72,9 @@ header {
             justify-content: center;
             opacity: 0;
             pointer-events: none;
-            transition: top 0.4s ease, opacity 0.4s ease;
+            transition:
+                top 0.4s ease,
+                opacity 0.4s ease;
         }
         .blour-efekt {
             background-color: rgba(33, 37, 41, 0.55) !important;
