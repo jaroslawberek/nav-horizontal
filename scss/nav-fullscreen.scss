@@ -1,0 +1,106 @@
+/* Zmienne */
+
+$nav-h-background-color: rgba(1, 3, 10, 1);
+$nav-h-background-image: linear-gradient(90deg, rgb(21, 21, 22) 0%, rgba(184, 187, 196, 1) 100%);
+$nav-h-color: white;
+$nav-h-font-family: "Segoe UI",
+Tahoma,
+sans-serif;
+$nav-h-font-size: 16px;
+$nav-h-min-height: 100vh;
+$nav-h-padding-r: 45px;
+//navbar-brand
+$nav-h-navbar-brand-margin: 0 0 0 1.5rem;
+//nav-item
+$nav-h-nav-item-margin-left: 10px;
+header {
+    margin: 0;
+    padding: 0;
+    nav {}
+    .navbar {
+        background-image: $nav-h-background-image;
+        color: $nav-h-color !important;
+        font-family: $nav-h-font-family;
+        font-size: $nav-h-font-size;
+        // padding: 0;
+    }
+    .navbar-brand {
+        margin: $nav-h-navbar-brand-margin;
+        color: $nav-h-color;
+    }
+    img {
+        margin-left: 1rem;
+        width: 200px;
+        height: auto;
+    }
+    .navbar-nav {
+        margin-right: $nav-h-padding-r;
+        .nav-item {
+            margin-left: $nav-h-nav-item-margin-left;
+            .nav-link {
+                color: $nav-h-color;
+            }
+        }
+    }
+    .navbar-collapse.fullscreen {
+        justify-content: flex-end;
+    }
+    /**********************************    
+    
+    MOBILE
+    
+    ***********************************/
+    @media (max-width: 991.98px) {
+        .navbar-toggler {
+            color: $nav-h-color !important;
+            justify-content: flex-end;
+        }
+        img {
+            margin-left: 40px;
+            width: 50px;
+            height: auto;
+        }
+        .navbar-collapse.fullscreen {
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(33, 37, 41, 0.97);
+            z-index: 1050;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: top 0.4s ease, opacity 0.4s ease;
+        }
+        .blour-efekt {
+            background-color: rgba(33, 37, 41, 0.55) !important;
+            backdrop-filter: blur(12px) !important;
+        }
+        /* Pokazujemy menu z animacją */
+        .navbar-collapse.fullscreen.show {
+            top: 0px;
+            opacity: 1;
+            pointer-events: auto;
+        }
+        /* Lista menu */
+        .navbar-collapse.fullscreen ul.navbar-nav {
+            text-align: left;
+        }
+        .navbar-collapse.fullscreen .nav-link {
+            font-size: 1.6rem;
+            padding: 12px 0;
+            color: white !important;
+            transition: color 0.3s ease;
+        }
+        .navbar-collapse.fullscreen .nav-link:hover {
+            color: #0d6efd !important;
+        }
+        /* Hamburger zawsze na wierzchu */
+        .navbar-toggler {
+            z-index: 1100;
+        }
+    }
+}
